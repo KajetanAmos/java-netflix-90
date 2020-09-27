@@ -1,0 +1,6 @@
+TO DO LIST:
+
+Task 1: Stworzyć Encje:
+-Aktorzy
+-Kategorie
+-Directors
