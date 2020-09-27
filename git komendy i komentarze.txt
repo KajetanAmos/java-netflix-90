@@ -1,0 +1,39 @@
+git -vv
+git push nazwa
+git pull --rebase origin master //
+git reflog
+git log
+git status
+git commit -a -m
+git commit -m
+history
+git checkout -b // przełączasz się na brancha, jeżeli nie istenieje to tworzy nowego.
+ls -l
+ls -la
+git branch -m mama tata // zmienia nazwe brancha z mama na tata
+git push origin b1 // pushuje rzeczy z brancha origin na branch b1 \
+git fetch // "wciąga" brancha z gita
+git branch -a // wyświetla wszystkie branche, które są lokalnymi branchami na kompie.
+git checkout baton // przełączanie się na brancha o nazwie baton.
+git checkout -b feature/MP-1 // development featcherów na których ktoś pracuje. Dev, master lokalnie nigdy nie pracujemy.
+git add . // dodaje wszystkie pliki na brancha/czy tam gita
+touch dupa.txt // dodaje plik dupa.txt do naszego "IntelliJ".
+git rebase -i HEAD~3 // bezpieczne tylko i wylącznie jeśli tylko wy pracujecie na tym branchu!!!!!!!! /// trzy commity zapisuje na gicie jako jeden commit. (krótsza historia, łatwiej przeglądać)
+			//  ^^^^^^^^^ rebase
+squash lub s // "pomija commity i merguje w jeden" -> esc -> : -> wq // THIS IS COMBINATION OF X COMMITS
+usuwamy wcześniejsze commity i zostawiamy to tak jak na screenie -> https://gyazo.com/f8e876c2849d00668e7b557c41a47ce3
+
+************
+****RADA****
+************
+jak robisz 4 commit, to rebase 3 poprzednie.
+////////////////////////////////////////////
+
+..
+
+Do leadera pull requesty. Leader merguje. Jak zaczynamy pracować nad klasą director. Ona ma być na osobnym branchu "Feature/nazwa-1" każdy feature, to nowy branch.
+
+////
+
+Kategorie, Aktorzy, Reżyserzy
+
