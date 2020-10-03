@@ -14,27 +14,28 @@ import static pl.yellowduck.netflix90.common.Gender.MALE;
 
 public class Main2 {
 
-  public static void main(String[] args) {
-    Director tommy = new Director("Tommy", "Wiseau", MALE);
-    Actor tommyActor = new Actor("Tommy", "Wiseau", MALE);
-    Actor julitette = new Actor("Juliette", "Danielle", FEMALE);
-    Actor greg = new Actor("Greg", "Sestero", MALE);
+    public static void main(String[] args) {
+        Director tommy = new Director("Tommy", "Wiseau", MALE);
+        Actor tommyActor = new Actor("Tommy", "Wiseau", MALE);
+        Actor julitette = new Actor("Juliette", "Danielle", FEMALE);
+        Actor greg = new Actor("Greg", "Sestero", MALE);
 
-    Set<Actor> actors = new HashSet<>();
-    actors.add(tommyActor);
-    actors.add(julitette);
-    actors.add(greg);
+        Set<Actor> actors = new HashSet<>();
+        actors.add(tommyActor);
+        actors.add(julitette);
+        actors.add(greg);
+        Category category = new Category("Drama", "Dramat");
+        VideoCassette theRoom = new VideoCassette(
+                "VID001",
+                BigDecimal.valueOf(20),
+                "The Room",
+                tommy,
+//        Category.DRAMA,
+                category,
+                actors);
 
-    VideoCassette theRoom = new VideoCassette(
-        "VID001",
-        BigDecimal.valueOf(20),
-        "The Room",
-        tommy,
-        Category.DRAMA,
-        actors);
-
-    theRoom.printOut();
-  }
+        theRoom.printOut();
+    }
 }
 
 
