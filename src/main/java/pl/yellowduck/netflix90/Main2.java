@@ -1,41 +1,35 @@
 package pl.yellowduck.netflix90;
 
 import pl.yellowduck.netflix90.films.Actor;
-import pl.yellowduck.netflix90.films.Category;
 import pl.yellowduck.netflix90.films.Director;
-import pl.yellowduck.netflix90.films.VideoCassette;
+import pl.yellowduck.netflix90.common.Gender;
+import pl.yellowduck.netflix90.common.Person;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-import static pl.yellowduck.netflix90.common.Gender.FEMALE;
-import static pl.yellowduck.netflix90.common.Gender.MALE;
-
-public class Main2 {
+public class Main {
 
   public static void main(String[] args) {
-    Director tommy = new Director("Tommy", "Wiseau", MALE);
-    Actor tommyActor = new Actor("Tommy", "Wiseau", MALE);
-    Actor julitette = new Actor("Juliette", "Danielle", FEMALE);
-    Actor greg = new Actor("Greg", "Sestero", MALE);
+    Director tommy = new Director("Tommy", "Wiseau", Gender.MALE);
+    Actor tommyActor = new Actor("Tommy", "Wiseau", Gender.MALE);
+    Actor julitette = new Actor("Juliette", "Danielle", Gender.FEMALE);
+    Actor greg = new Actor("Greg", "Sestero", Gender.MALE);
 
-    Set<Actor> actors = new HashSet<>();
-    actors.add(tommyActor);
-    actors.add(julitette);
-    actors.add(greg);
+    List<Person> persons = new ArrayList<>();
+    persons.add(tommy);
+    persons.add(tommyActor);
+    persons.add(julitette);
+    persons.add(greg);
 
-    Category category = new Category("DRAMA", "Dramat");
-    VideoCassette theRoom = new VideoCassette(
-            "VID001",
-            BigDecimal.valueOf(20),
-            "The Room",
-            tommy,
-//        Category.DRAMA,
-            category,
-            actors);
+    for (int i = 0; i < persons.size() - 1; i++) {
+      Person person = persons.get(i);
+      System.out.println(person.toString());
+    }
 
-    theRoom.printOut();
+    // or
+//    for (Person person : persons) {
+//      person.introduce();
+//    }
   }
 }
-
