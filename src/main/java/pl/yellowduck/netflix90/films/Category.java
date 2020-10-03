@@ -1,18 +1,20 @@
 package pl.yellowduck.netflix90.films;
 
-public enum Category {
+import javax.persistence.*;
 
-  COMEDY, // orinal value 0
+@Entity
+@Table(name = "category")
+public class Category {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer id;
+  @Column(name = "nameCategory")
+  private String nameCategory;
+  @Column (name = "description")
+  private String description;;
 
-  FANTASY,
-
-  DRAMA,  // orinal value 1
-
-  HORROR, // orinal value 2
-
-  MUSICAL, // orinal value 3
-
-  ACTION; // orinal value 4
-
-
+  public Category(String nameCategory, String description) {
+    this.nameCategory = nameCategory;
+    this.description = description;
+  }
 }
