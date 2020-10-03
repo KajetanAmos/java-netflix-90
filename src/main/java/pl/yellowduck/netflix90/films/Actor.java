@@ -6,6 +6,11 @@ import lombok.Getter;
 import pl.yellowduck.netflix90.common.Gender;
 import pl.yellowduck.netflix90.common.Person;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Actors")
 @Getter
 public class Actor extends Person {
 
