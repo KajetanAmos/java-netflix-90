@@ -8,7 +8,7 @@ import pl.yellowduck.netflix90.common.Person;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main2 {
 
   public static void main(String[] args) {
     Director tommy = new Director("Tommy", "Wiseau", Gender.MALE);
